@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ <display-name>Student KQ System</display-name>
+ <filter>
+  <filter-name>encodingFilter</filter-name>
+  <filter-class>com.kaoqin.filter.EncondingFilter</filter-class>
+  <init-param>
+   <param-name>encoding</param-name>
+   <param-value>gb2312</param-value>
+  </init-param>
+ </filter>
+ <filter-mapping>
+  <filter-name>encodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.kaoqin.servlet.LoginServlet</servlet-class>
+ </servlet>
+  <servlet>
+    <servlet-name>addTeacher</servlet-name>
+    <servlet-class>com.kaoqin.servlet.AddTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>updateTeacher</servlet-name>
+    <servlet-class>com.kaoqin.servlet.UpdateTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>delTeacher</servlet-name>
+    <servlet-class>com.kaoqin.servlet.DelTeacher</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>addStudent</servlet-name>
+    <servlet-class>com.kaoqin.servlet.AddStudent</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>updateStudent</servlet-name>
+    <servlet-class>com.kaoqin.servlet.UpdateStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>delStudent</servlet-name>
+    <servlet-class>com.kaoqin.servlet.DelStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>addQingJia</servlet-name>
+    <servlet-class>com.kaoqin.servlet.AddQingJia</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateKqOn</servlet-name>
+    <servlet-class>com.kaoqin.servlet.UpdateKqOn</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelKq</servlet-name>
+    <servlet-class>com.kaoqin.servlet.DelKq</servlet-class>
+  </servlet>
+
+
+
+
+ <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/login</url-pattern>
+ </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addTeacher</servlet-name>
+    <url-pattern>/admin/addTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateTeacher</servlet-name>
+    <url-pattern>/admin/updateTeacher</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>updateStudent</servlet-name>
+    <url-pattern>/admin/updateStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delTeacher</servlet-name>
+    <url-pattern>/admin/delTeacher</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addStudent</servlet-name>
+    <url-pattern>/admin/addStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delStudent</servlet-name>
+    <url-pattern>/admin/delStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addQingJia</servlet-name>
+    <url-pattern>/student/addQingJia</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateKqOn</servlet-name>
+    <url-pattern>/teacher/updateKqOn</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelKq</servlet-name>
+    <url-pattern>/teacher/delKq</url-pattern>
+  </servlet-mapping>
+ <welcome-file-list>
+  <welcome-file>login.html</welcome-file>
+  <welcome-file>index.jsp</welcome-file>
+ </welcome-file-list>
+</web-app>
